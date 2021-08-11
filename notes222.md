@@ -220,3 +220,6 @@ MIME type of - jei console rodo sio tipo error reiskia kazkas negerai su tipu. T
 Jis yra svarbus!!!
 
 ```
+
+ <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> // tinkamiausias budas favicon ikonelei
+```
