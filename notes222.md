@@ -226,6 +226,10 @@ Jis yra svarbus!!!
 DEV VERSIJOS PALEIDIMAS: node .
 PRODUCTION SERVERIO PALEIDIMAS: NODE_ENV=production node .
 
+nuoroda kaip pasiekti visus css failus su .css gale
+
+ <link rel="stylesheet" href="./css/pages/{{page-css}}.css">
+
 ```
 
 ```
