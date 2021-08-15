@@ -1,6 +1,7 @@
 _28 group project_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
+Creating server from the very beginning...
 
 ## Project features
 

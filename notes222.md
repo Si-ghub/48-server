@@ -227,8 +227,13 @@ DEV VERSIJOS PALEIDIMAS: node .
 PRODUCTION SERVERIO PALEIDIMAS: NODE_ENV=production node .
 
 nuoroda kaip pasiekti visus css failus su .css gale
+susiimportuoja visus css failus is pages folderio (ka esam nurode)
+./css/pages/home.css (keiciasi tik home dalis), todel galim padaryti kad naudotu visus nurodytus css failus
 
  <link rel="stylesheet" href="./css/pages/{{page-css}}.css">
+
+"/" Home - nurodom header.html faile kad galetume patekti tiesiai i puslapi
+"/about" About
 
 ```
 
