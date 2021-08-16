@@ -7,13 +7,26 @@
 @import '../3rd-party/font-awesome.min.css';
 /* components */
 @import '../components/header.css';
-@import '../components/form.css';
 @import '../components/footer.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 
-.center-form {
+main {
   display: flex;
-  flex-direction: column;
+  padding: 80px;
+  justify-content: center;
   align-items: center;
+}
+main > h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  main > h1 {
+    font-size: 60px;
+  }
+  main > h1 > span {
+    display: none;
+  }
 }

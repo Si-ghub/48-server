@@ -1,10 +1,13 @@
 /* base */
-@import '../base/layout.css';
 @import '../base/reset.css';
+@import '../base/variables.css';
+@import '../base/layout.css';
+@import '../base/base.css';
 /* 3rd-party */
+@import '../3rd-party/font-awesome.min.css';
 /* components */
+@import '../components/header.css';
 @import '../components/about.css';
 @import '../components/footer.css';
-@import '../components/header.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */

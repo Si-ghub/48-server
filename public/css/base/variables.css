@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #36f;
+  --info-color: #36f;
+  --success-color: #3c0;
+  --error-color: #f33;
+  --info-color-anti: #fff;
+  --success-color-anti: #fff;
+  --error-color-anti: #fff;
+}

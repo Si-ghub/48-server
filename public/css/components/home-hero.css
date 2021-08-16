@@ -1,2 +1,21 @@
 .hero {
+  height: 300px;
+  padding: 0;
+  position: relative;
+}
+.hero > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 6px #000a;
+}
+.hero > .hero-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }

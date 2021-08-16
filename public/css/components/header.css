@@ -1,2 +1,40 @@
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px #0002;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+header nav {
+  line-height: 40px;
+  color: #36f;
+  text-decoration: none;
+}
+header nav.user-section {
+  color: #333;
+}
+header nav > a {
+  padding: 0 10px;
+  line-height: inherit;
+  font-size: 20px;
+  color: inherit;
+  text-decoration: inherit;
+}
+header nav > a:hover {
+  text-decoration: underline;
+}
+header nav > a > .fa {
+  line-height: inherit;
+  font-size: inherit;
 }
