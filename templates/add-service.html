@@ -1,0 +1,41 @@
+<section class="center-form">
+    <h2 class="section-title">Add service</h2>
+
+    <div class="form-messages show" data-state="info">
+        <i class="icon fa fa-info-circle"></i>
+        <i class="icon fa fa-check"></i>
+        <i class="icon fa fa-shield"></i>
+        <p class="message">Some message Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <i class="close fa fa-times"></i>
+    </div>
+
+    <form class="form">
+        <div class="form-row">
+            <label for="service_name">Service name</label>
+            <input id="service_name" type="text">
+        </div>
+        <div class="form-row">
+            <label for="slug">URL slug</label>
+            <input id="slug" type="text">
+        </div>
+        <div class="form-row">
+            <label for="short_desc">Shor description</label>
+            <textarea id="short_desc"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="full_desc">Full description</label>
+            <textarea id="full_desc"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="price">Price, EUR</label>
+            <input id="price" type="number">
+        </div>
+        <div class="form-row">
+            <label for="is_active">Is activated?</label>
+            <input id="is_active" type="checkbox">
+        </div>
+        <div class="form-row">
+            <button type="submit">Add service</button>
+        </div>
+    </form>
+</section>

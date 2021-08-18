@@ -67,7 +67,14 @@
   background-color: #fefefe;
   box-shadow: 0 4px 10px #0002;
 }
+
+.form > .form-row {
+  display: flex;
+  width: 100%;
+}
+
 .form > .form-row > label {
+  width: 200px;
   float: left;
   margin-bottom: 5px;
   font-size: 18px;
@@ -86,6 +93,15 @@
   padding: 0 10px;
   line-height: 36px;
   font-size: 22px;
+}
+.form > .form-row > textarea {
+  width: 100%;
+  min-height: 104px;
+  max-height: 300px;
+  padding: 0 10px;
+  line-height: 22px;
+  font-size: 18px;
+  resize: vertical;
 }
 .form > .form-row > button[type='submit'] {
   padding: 0 20px;
