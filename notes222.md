@@ -235,6 +235,8 @@ susiimportuoja visus css failus is pages folderio (ka esam nurode)
 "/" Home - nurodom header.html faile kad galetume patekti tiesiai i puslapi
 "/about" About
 
+ajax.js
+
 ```
 
 ```

@@ -1,3 +1,5 @@
+import { ajax } from "./ajax.js";
+
 const formMessageDOM = document.querySelector('.form-messages');
 const pFormMessageDOM = formMessageDOM.querySelector('.message');
 const closeMessageDOM = formMessageDOM.querySelector('.close');
@@ -48,6 +50,31 @@ function submitFormInfo(e) {
     }
 
     closeMessage();
+    //aprasas kur/ka siusti {duomenis}
+    ajax({
+        method: 'POST', // GET, PUT, DELETE - kt naudojami metodai. Siuntimo budas
+        headers: {},
+        endpoint: 'api/users', // kur siusime 
+        //duomenys
+        data: { username, email, password: pass } // kintamojo pass reiksme 
+    }, responseAction);
+}
+
+// call back turi priimti atsaka is serverio ir atitinkamai kazka su juo daryti
+function responseAction(response) {
+    try {
+        // bandome isparsinti atsaka
+        const responseObject = JSON.parse(response);
+        // {error: "Message"}
+        // {success: "Message"}
+        const keys = Object.keys(responseObject);
+        // ['error']
+        // ['success']
+        const key = keys[0];
+        showMessage(key, responseObject[key]);
+    } catch (error) {
+        showMessage('error', 'Serverio klaida!');
+    }
 }
 
 closeMessageDOM.addEventListener('click', closeMessage);
