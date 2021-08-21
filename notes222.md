@@ -235,6 +235,10 @@ susiimportuoja visus css failus is pages folderio (ka esam nurode)
 "/" Home - nurodom header.html faile kad galetume patekti tiesiai i puslapi
 "/about" About
 
+Network/Fetch/XHR - duomenu siuntimas i serveri
+
+'api/' - visada nuoroda i api
+
 ajax.js
 
 ```
