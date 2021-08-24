@@ -218,19 +218,18 @@ Fontawesome filu importas:
 
 MIME type of - jei console rodo sio tipo error reiskia kazkas negerai su tipu. Tai yra tas pats failo tipas, tik papildomais pribumbasais tech lygyje
 Jis yra svarbus!!!
-
 ```
 
- <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> // tinkamiausias budas favicon ikonelei
+```html
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" /> //
+tinkamiausias budas favicon ikonelei DEV VERSIJOS PALEIDIMAS: node . PRODUCTION
+SERVERIO PALEIDIMAS: NODE_ENV=production node . nuoroda kaip pasiekti visus css
+failus su .css gale susiimportuoja visus css failus is pages folderio (ka esam
+nurode) ./css/pages/home.css (keiciasi tik home dalis), todel galim padaryti kad
+naudotu visus nurodytus css failus
 
-DEV VERSIJOS PALEIDIMAS: node .
-PRODUCTION SERVERIO PALEIDIMAS: NODE_ENV=production node .
-
-nuoroda kaip pasiekti visus css failus su .css gale
-susiimportuoja visus css failus is pages folderio (ka esam nurode)
-./css/pages/home.css (keiciasi tik home dalis), todel galim padaryti kad naudotu visus nurodytus css failus
-
- <link rel="stylesheet" href="./css/pages/{{page-css}}.css">
+<link rel="stylesheet" href="./css/pages/{{page-css}}.css" />
+```
 
 "/" Home - nurodom header.html faile kad galetume patekti tiesiai i puslapi
 "/about" About
@@ -241,6 +240,35 @@ Network/Fetch/XHR - duomenu siuntimas i serveri
 
 ajax.js
 
-```
+POST sukuriam vartotoja/oblekta
+GET atsiusti ir perskaityti /api/users?email=
+DELETE
+PUT kreipiames i objekta. Pakeisti galim viska iskyrus e-mail (pagrindine info kaip atpazistam user)
 
-```
+TOKEN- turi galiojimo laika.
+
+.gitignore
+.data - ignoruojam data folderi ir visus jame esancius failus
+*.css - ignoruojam visus css failus
+demo/*.js - ignoruojame demo faile esancius js failus
+*/*css - ignoruojame visus css failus kurie yra folderiuose. Atskiru css failu ne.
+
+LOGIN LOGIKA:
+
+1. Gaunam užklausą su "header.cookie"
+2. Išsiparsiname tuos cookies
+   2a. Turim cookies objektą
+3. Pagal cookies esantį "login-token" išsiaiškiname:
+   3a. jei toks token .json failas neegzistuoja - vartotojas neprisijungęs
+   3b. jei failas egzistuoja, bet jame nėra expire reikšmės - vartotojas neprisijungęs
+   3c. gražiname vartotojo token objektą
+4. iš vartotojo token objekto išsitraukiame "email"
+5. perskaitome vartotojo .json failą:
+   5a. jei toks failas neegzistuoja - vartotojo neegzistuoja
+   5b. jei yra - perskaitom ten esantį objektą
+6. visą info perduodame į "data" konstantą (kintamąjį)
+7. data keliauja į tinkamą puslapio handler'į
+8. handler'is perduoda dalį (data.user) info į header funkciją
+9. header funkcija atitinkamai sugeneruoja savo turinį
+   9a. jei vartotojas neprisijungęs - logo + nav (home, about) + nav (login, regiter)
+   9a. jei vartotojas prisijungęs - logo + nav (home, about, services) + nav (user dashboard)
