@@ -51,11 +51,9 @@ function responseAction(response) {
         const responseObject = JSON.parse(response);
         if (responseObject.error) {
             localStorage.removeItem('login-token');
-            document.cookie = 'login-token=';
             showMessage('error', responseObject.error);
         }
         localStorage.setItem('login-token', responseObject.token);
-        document.cookie = 'login-token=' + responseObject.token;
         showMessage('success', 'Token gautas ;)');
     } catch (error) {
         showMessage('error', 'Serverio klaida!');
