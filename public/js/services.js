@@ -77,6 +77,7 @@ function responseAction(response) {
         const responseObject = JSON.parse(response);
         if (responseObject.error) {
             showMessage('error', responseObject.error);
+            return;
         }
         showMessage('success', 'Paslauga sekmingai prideta');
         location.href = '/admin/services';
