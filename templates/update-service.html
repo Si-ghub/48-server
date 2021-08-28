@@ -12,27 +12,27 @@
     <form class="form">
         <div class="form-row">
             <label for="service_name">Service name</label>
-            <input id="service_name" type="text">
+            <input id="service_name" type="text" value="{{serviceName}}">
         </div>
         <div class="form-row">
             <label for="slug">URL slug</label>
-            <input id="slug" type="text">
+            <input id="slug" type="text" value="{{urlSlug}}" disabled>
         </div>
-        <div class="form-row">
+        <div class=" form-row">
             <label for="short_desc">Shor description</label>
-            <textarea id="short_desc"></textarea>
+            <textarea id="short_desc">{{shortDescription}}</textarea>
         </div>
         <div class="form-row">
             <label for="full_desc">Full description</label>
-            <textarea id="full_desc"></textarea>
+            <textarea id="full_desc">{{fullDescription}}</textarea>
         </div>
         <div class="form-row">
             <label for="price">Price, EUR</label>
-            <input id="price" type="number">
+            <input id="price" type="number" value="{{price}}">
         </div>
         <div class="form-row">
             <label for="is_active">Is activated?</label>
-            <input id="is_active" type="checkbox">
+            <input id="is_active" type="checkbox" {{isActive}}>
         </div>
         <div class="form-row">
             <button type="submit">Add service</button>
