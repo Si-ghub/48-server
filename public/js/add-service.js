@@ -28,8 +28,6 @@ function closeMessage() {
 function submitFormInfo(e) {
     e.preventDefault();
 
-    const minimumPasswordLength = 8;
-
     const serviceName = serviceNameDOM.value;
     const urlSlug = urlSlugDOM.value;
     const shortDescription = shortDescriptionDOM.value;
