@@ -1,0 +1,27 @@
+{
+  "name": "48-server",
+  "version": "1.0.0",
+  "description": "_28 group project_",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Si-ghub/48-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Si-ghub/48-server/issues"
+  },
+  "homepage": "https://github.com/Si-ghub/48-server#readme"
+}
