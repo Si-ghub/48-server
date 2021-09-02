@@ -11,11 +11,44 @@ app.init = async () => {
         database: 'barsukas',
     });
 
-    // paruosti reikiamus direktorijas
+    let sql = '';
+    let rows = [];
 
-    // paruosti reikiamus failus
+    // perskaitom ka turim is pradziu
+    sql = 'SELECT * \
+    FROM `cars` \
+    WHERE `id` = 3';
+    [rows] = await connection.execute(sql);
+    console.log(rows);
 
-    // inicijuojame serveri
+    // irasom nauja masina
+    sql = 'INSERT INTO `cars` \
+        (`id`, `marke`, `modelis`, `color`, `engine`, `doors`) \
+        VALUES (8, "Audi", "100", "grey", "2.2", "3")';
+    [rows] = await connection.execute(sql);
+    console.log(rows);
+
+    // atnaujiname
+    sql = 'UPDATE `cars` \
+        SET `marke` = "Audi", \
+            `modelis` = "80", \
+            `color` = "green" \
+        WHERE `cars`.`id` = 4';
+    [rows] = await connection.execute(sql);
+    console.log(rows);
+
+    // perskaitom ka turim po atnaujinimo
+    sql = 'SELECT * \
+    FROM `cars` \
+    WHERE `id` = 4';
+    [rows] = await connection.execute(sql);
+    console.log(rows);
+
+    // istrinam
+    sql = 'DELETE FROM `cars` \
+    WHERE `id` = 1';
+    [rows] = await connection.execute(sql);
+    console.log(rows);
     server.init(connection);
 }
 

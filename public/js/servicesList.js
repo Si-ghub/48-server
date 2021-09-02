@@ -7,7 +7,7 @@ for (const item of itemsDOM) {
         ajax({
             method: 'DELETE', // siuntimo budas
             headers: {},
-            endpoint: 'api/services?urlSlug=' + item.id, // kuria palslauga norime istrinti..TIKSLIAI
+            endpoint: 'api/services?urlSlug=' + item.id, // kuria palslauga norime istrinti..TIKSLIAI 
         }, responseAction);
     })
 }

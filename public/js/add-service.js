@@ -65,7 +65,15 @@ function submitFormInfo(e) {
         method: 'POST', // siuntimo budas
         headers: {},
         endpoint: 'api/services',
-        data: { serviceName, urlSlug, shortDescription, fullDescription, price, isActive }
+        data:
+        {
+            serviceName,
+            urlSlug,
+            shortDescription,
+            fullDescription,
+            price,
+            isActive
+        }
     }, responseAction);
 }
 
